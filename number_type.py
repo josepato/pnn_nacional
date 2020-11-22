@@ -54,7 +54,7 @@ def search_area(phone):
 
 def search_serie(serie, x_phone ):
     #print 'serie' , serie
-    res = {'seire':None, 'datos':None}
+    res = {'serie':None, 'datos':None}
     if serie.get(x_phone[:3]):
         res.update({'serie':phone[:3], 'datos':serie[x_phone[:3]]})
     elif serie.get(phone[:4]):
