@@ -4,6 +4,24 @@
 
 class test():
 
+        def create_concesionado(acceso_obj, mock_crea_consecion, mock_crea_consecion_otro ):
+        """
+        Crea un articulo concesionado con varios equipos.
+
+        Detalles:
+            1. Se obtiene informacion del turno
+            2. Se inicia el turno
+            3. Se obtiene informacion del turno
+            4. Se finaliza el turno
+        """
+        logging.info('================> Arranca TEST #1: Creando Articulo concesionado2...')
+        articulo = create_article_concessioned(acceso_obj, mock_crea_consecion)
+        assert articulo.get("status_code") == 201
+        articulo_otro = create_article_concessioned(acceso_obj, mock_crea_consecion_otro)
+        assert articulo_otro.get("status_code") == 201
+        logging.info(f'articulo {articulo}')
+        record_id = articulo.get('id')
+        return articulo, articulo_otro
 
     def partial_return(articulo, data_concesion):
         equipos = data_concesion['equipos']
