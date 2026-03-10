@@ -46,4 +46,5 @@ class test():
 
     def one_article_return():
         aca tambine
+        otra cosilla
         return True
