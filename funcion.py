@@ -40,8 +40,10 @@ class test():
                 'file_name':'equipo_total.png',
                 'file_url':'https://f001.backblazeb2.com/file/app-linkaform/public-client-126/68600/6076166dfd84fa7ea446b917/2026-02-25T11:44:39_5.png'}]
             }
+        alog nueo a complyete
         response = acceso_obj.update_article_concessioned(data, articulo['id'])
         return response
 
     def one_article_return():
+        aca tambine
         return True
